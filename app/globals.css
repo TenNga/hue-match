@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F2E8D5;
+  --foreground: #495867;
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --32px: 2rem;
+  --40px: 2.5rem;
+  --48px: 3rem;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Brand Styles */
+
+.primary-heading {
+  font-size: var(--24px);
+  font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  .primary-heading {
+    font-size: var(--32px);
+    font-weight: bold;
+  }
+}
