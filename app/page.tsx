@@ -1,3 +1,4 @@
+import Step from "@/components/ui/Step";
 import Image from "next/image";
 
 export default function Home() {
@@ -37,15 +38,7 @@ export default function Home() {
               />
               <p className="inline text-3xl font-extrabold capitalize">upload image</p>
             </div>
-            <div className="flex justify-start items-center gap-7">
-              <Image 
-                src="/assets/icons/step_1.svg"
-                width={70}
-                height={70}
-                alt="Step 1 icon"
-              />
-              <p className="inline text-3xl font-extrabold capitalize">upload image</p>
-            </div>
+            <Step />
           </div>
         </section>
         <section className="flex-grow w-full">
