@@ -6,8 +6,8 @@ import FileUploader from './FileUploader'
 import { steps } from '@/constants'
 
 const FirstStep = () => {
-    const handleFileUpload = () => {
-        
+    const handleFileUpload = (files : File[]) => {
+        console.log("File: ",files[0]);
     }
   return (
     <div className='first-step'>
