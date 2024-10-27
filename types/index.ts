@@ -12,7 +12,10 @@ export interface StepProps {
     }
 }
 
-export interface ButtonProps {
+export interface ChildrenType  {
+    children: React.ReactNode
+}
+
+export interface ButtonProps extends ChildrenType {
     type: string,
-    children: ReactElement
 }

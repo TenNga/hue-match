@@ -1,51 +1,15 @@
 import Button from "@/components/ui/Button";
+import Header from "@/components/Header";
 import Step from "@/components/ui/Step";
+import { steps } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
-  const steps = {
-    one: {
-      icon: {
-        src : "/assets/icons/step_1.svg",
-                width : 70,
-                height : 70,
-                alt : "Step 1 icon"
-      },
-      label: "upload image"
-    },
-    two: {
-      icon: {
-        src : "/assets/icons/step_2.svg",
-                width : 70,
-                height : 70,
-                alt : "Step 1 icon"
-      },
-      label: "pick color: (hair, skin)"
-    },
-    three: {
-      icon: {
-        src : "/assets/icons/step_3.svg",
-                width : 70,
-                height : 70,
-                alt : "Step 1 icon"
-      },
-      label: "generate palette"
-    }
-  }
+
   return (
     <div className="min-h-screen">
-      <header className="container m-auto pt-8">
-        <div>
-        <Image
-          src="/assets/icons/logo_w_name.png"
-          alt="Hue Match Logo"
-          width={180}
-          height={38}
-          priority
-        />
-        </div>
-      </header>
+      <Header />
       <main className="flex flex-col-reverse justify-between container my-10 mx-auto gap-4 lg:flex-row">
         <section className="flex-grow w-full">
           <h1 className="primary-heading">Personal Color Palette Generator</h1>
