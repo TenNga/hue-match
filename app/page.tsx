@@ -1,5 +1,7 @@
+import Button from "@/components/ui/Button";
 import Step from "@/components/ui/Step";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const steps = {
@@ -44,15 +46,18 @@ export default function Home() {
         />
         </div>
       </header>
-      <main className="flex justify-between container my-10 mx-auto gap-4">
+      <main className="flex flex-col-reverse justify-between container my-10 mx-auto gap-4 lg:flex-row">
         <section className="flex-grow w-full">
           <h1 className="primary-heading">Personal Color Palette Generator</h1>
           <p>Easy to use, powered by AI.</p>
-          <div className="flex flex-col gap-8 mt-16">
+          <div className="flex flex-col gap-8 mt-16 mb-24">
             <Step step={steps.one} />
             <Step step={steps.two} />
             <Step step={steps.three} />
           </div>
+          <Button type="main">
+            <Link href="/generator">let's Start</Link>
+            </Button>
         </section>
         <section className="flex-grow w-full">
           <Image 
@@ -64,7 +69,7 @@ export default function Home() {
           />
         </section>
       </main>
-      <footer className="flex items-center justify-center">
+      <footer className="flex items-center justify-center absolute bottom-5 left-1/2 -translate-x-1/2">
         <p>Copyright © 2024 Hue Match</p>
       </footer>
     </div>
