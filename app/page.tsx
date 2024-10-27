@@ -2,6 +2,35 @@ import Step from "@/components/ui/Step";
 import Image from "next/image";
 
 export default function Home() {
+  const steps = {
+    one: {
+      icon: {
+        src : "/assets/icons/step_1.svg",
+                width : 70,
+                height : 70,
+                alt : "Step 1 icon"
+      },
+      label: "upload image"
+    },
+    two: {
+      icon: {
+        src : "/assets/icons/step_2.svg",
+                width : 70,
+                height : 70,
+                alt : "Step 1 icon"
+      },
+      label: "pick color: (hair, skin)"
+    },
+    three: {
+      icon: {
+        src : "/assets/icons/step_3.svg",
+                width : 70,
+                height : 70,
+                alt : "Step 1 icon"
+      },
+      label: "generate palette"
+    }
+  }
   return (
     <div className="min-h-screen">
       <header className="container m-auto pt-8">
@@ -20,25 +49,9 @@ export default function Home() {
           <h1 className="primary-heading">Personal Color Palette Generator</h1>
           <p>Easy to use, powered by AI.</p>
           <div className="flex flex-col gap-8 mt-16">
-            <div className="flex justify-start items-center gap-7">
-              <Image 
-                src="/assets/icons/step_1.svg"
-                width={70}
-                height={70}
-                alt="Step 1 icon"
-              />
-              <p className="inline text-3xl font-extrabold capitalize">upload image</p>
-            </div>
-            <div className="flex justify-start items-center gap-7">
-              <Image 
-                src="/assets/icons/step_1.svg"
-                width={70}
-                height={70}
-                alt="Step 1 icon"
-              />
-              <p className="inline text-3xl font-extrabold capitalize">upload image</p>
-            </div>
-            <Step />
+            <Step step={steps.one} />
+            <Step step={steps.two} />
+            <Step step={steps.three} />
           </div>
         </section>
         <section className="flex-grow w-full">
