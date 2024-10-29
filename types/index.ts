@@ -39,3 +39,9 @@ export interface ColorPickerProps {
         image:File,
         onPicked: (color: string) => void
 }
+
+export interface PickedColorsProps {
+    firstColor: string,
+    secondColor: string,
+    thirdColor: string,
+}
