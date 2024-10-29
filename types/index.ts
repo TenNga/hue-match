@@ -30,3 +30,12 @@ export interface FirstStepProps {
     upload: File[] | null
 }
   
+export interface ColorProps {
+    label: string,
+    color: string
+}
+
+export interface ColorPickerProps {
+        image:File,
+        onPicked: (color: string) => void
+}
