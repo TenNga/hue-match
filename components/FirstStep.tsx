@@ -11,8 +11,7 @@ const FirstStep = ({onUpload,upload}:FirstStepProps) => {
   return (
     <div className='first-step'>
         <Step step={steps.one} />
-        <FileUploader onChange={onUpload} />   
-        {upload && <h1>Filed Uploaded and ready!</h1>} 
+        <FileUploader onChange={onUpload} upload={upload} />    
     </div>
   )
 }

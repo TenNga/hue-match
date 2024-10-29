@@ -7,18 +7,18 @@ import React, {useCallback} from 'react'
 import {useDropzone} from 'react-dropzone'
 
 type FileUploaderProps = {
-    files?: File[] | undefined,
+    upload: File[] | null,
     onChange: (files: File[]) => void
 }
 
-const FileUploader = ({files, onChange} : FileUploaderProps) => {
+const FileUploader = ({upload, onChange} : FileUploaderProps) => {
   const onDrop = useCallback((acceptedFiles : File[]) => {
    onChange(acceptedFiles)
   }, [])
   const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop})
 
   return (
-    <div {...getRootProps()} className='file-upload'>
+    <div {...getRootProps()} className={`file-upload ${upload ? 'hidden' : ''} `}>
       <input {...getInputProps()} />
         <>
         <Image src="/assets/icons/upload.svg" width={40} height={40} alt='upload' />
