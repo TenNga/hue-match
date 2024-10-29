@@ -15,7 +15,7 @@ export const steps = {
                 height : 70,
                 alt : "Step 1 icon"
       },
-      label: "pick color: (hair, skin)"
+      label: "pick color"
     },
     three: {
       icon: {

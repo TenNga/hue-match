@@ -5,12 +5,11 @@ import ColorPicker from './ColorPicker'
 import PickedColors from './PickedColors'
 
 const SecondStep = ({image}:{image:File}) => {
-    let combineColor;
     const [currentColor, setCurrentColor] = useState('rgb(255,255,255)');
     const [skinColor, setSkinColor] = useState('rgb(255,255,255)');
     const [skinTwoColor, setSkinTwoColor] = useState('rgb(255,255,255)');
     const [hairColor, setHairColor] = useState('rgb(255,255,255)');
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(0); //use to count three clicks
 
     useEffect(()=>{
         switch (true) {
@@ -35,8 +34,7 @@ const SecondStep = ({image}:{image:File}) => {
   return (
     <div className='second-step'>
          <Step step={steps.two} />  
-         <div className='mx-24'>
-            <h1>Count:: {count}</h1>
+         <div className='pl-24'>
             <PickedColors firstColor={skinColor} secondColor={skinTwoColor} thirdColor={hairColor}/>  
             <ColorPicker onPicked = {handleColorPicked} image={image}/>
          </div>
