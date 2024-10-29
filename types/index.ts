@@ -19,3 +19,14 @@ export interface ChildrenType  {
 export interface ButtonProps extends ChildrenType {
     type: string,
 }
+
+
+export interface FileProps {
+    files: File[] | null;
+  }
+
+export interface FirstStepProps {
+    onUpload: React.Dispatch<React.SetStateAction<File[] | null>>,
+    upload: File[] | null
+}
+  

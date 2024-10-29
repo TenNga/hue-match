@@ -1,16 +1,14 @@
-import FileUploader from '@/components/FileUploader'
-import FirstStep from '@/components/FirstStep'
 import Header from '@/components/Header'
 import Main from '@/components/Main'
-import Step from '@/components/ui/Step'
-import { steps } from '@/constants'
+import StepsContainer from '@/components/StepsContainer'
+
 
 const Generator = () => {
   return (
     <div>
         <Header />
         <Main>
-           <FirstStep />
+           <StepsContainer />
         </Main>
     </div>
   )

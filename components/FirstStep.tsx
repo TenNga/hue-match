@@ -1,18 +1,18 @@
 'use client'
 
-import React from 'react'
+import React, { useState } from 'react'
 import Step from './ui/Step'
 import FileUploader from './FileUploader'
 import { steps } from '@/constants'
+import { FileProps, FirstStepProps } from '@/types'
 
-const FirstStep = () => {
-    const handleFileUpload = (files : File[]) => {
-        console.log("File: ",files[0]);
-    }
+const FirstStep = ({onUpload,upload}:FirstStepProps) => {
+
   return (
     <div className='first-step'>
         <Step step={steps.one} />
-        <FileUploader onChange={handleFileUpload} />    
+        <FileUploader onChange={onUpload} />   
+        {upload && <h1>Filed Uploaded and ready!</h1>} 
     </div>
   )
 }
