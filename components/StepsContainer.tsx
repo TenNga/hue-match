@@ -8,10 +8,10 @@ const StepsContainer = () => {
     const [upload, setUpload] = useState<File[] | null>(null)
     
   return (
-    <div>
+    <div className='flex flex-col gap-10'>
         <FirstStep onUpload={setUpload} upload={upload}/>
         {
-            upload && <SecondStep />
+            upload && <SecondStep image={upload[0]}/>
         }
     </div>
   )
