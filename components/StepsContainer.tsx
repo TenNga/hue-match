@@ -6,9 +6,11 @@ import SecondStep from './SecondStep'
 import { StepContext, StepProvider } from '@/contexts/StepContext'
 import useStepContext from '@/hooks/useStepContext'
 import Button from './ui/Button'
+import { whiteColor } from '@/constants'
+import MainButtons from './MainButtons'
 
 const StepsContainer = () => {
-    const {upload, setUpload} = useStepContext();
+    const {upload, setUpload, hairColor} = useStepContext();
     
    return (
     <section className='flex flex-col gap-10'>
@@ -19,14 +21,11 @@ const StepsContainer = () => {
             upload && 
                 <SecondStep image={upload[0]}/>
         }
-        <div className='flex justify-between items-center gap-9 pl-24'>
-            <Button type='primary'>
-                Generate
-            </Button>
-            <Button type='secondary'>
-                reset
-            </Button>
-        </div>
+        
+        {
+        hairColor !== whiteColor && <MainButtons />
+        }
+        
             
         
     </section>

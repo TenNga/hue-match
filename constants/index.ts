@@ -27,3 +27,5 @@ export const steps = {
       label: "generate palette"
     }
   }
+
+  export const whiteColor = 'rgb(255,255,255)';
