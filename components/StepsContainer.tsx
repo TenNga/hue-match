@@ -5,12 +5,13 @@ import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
 import { StepContext, StepProvider } from '@/contexts/StepContext'
 import useStepContext from '@/hooks/useStepContext'
+import Button from './ui/Button'
 
 const StepsContainer = () => {
     const {upload, setUpload} = useStepContext();
     
    return (
-    <div className='flex flex-col gap-10'>
+    <section className='flex flex-col gap-10'>
 
         <FirstStep onUpload={setUpload} upload={upload}/>
         
@@ -18,9 +19,17 @@ const StepsContainer = () => {
             upload && 
                 <SecondStep image={upload[0]}/>
         }
+        <div className='flex justify-between items-center gap-9 pl-24'>
+            <Button type='primary'>
+                Generate
+            </Button>
+            <Button type='secondary'>
+                reset
+            </Button>
+        </div>
             
         
-    </div>
+    </section>
   )
 }
 

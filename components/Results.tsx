@@ -35,6 +35,7 @@ const Results = () => {
                         <Step step={steps.two} done={true} /> :
                         <Step step={steps.two} done={false} />
                 }
+                <Step step={steps.three} done={false} />
             </div>
             
         </section>
