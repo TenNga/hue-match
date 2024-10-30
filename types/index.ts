@@ -9,7 +9,8 @@ export interface StepProps {
             alt: string
         },
         label: string
-    }
+    },
+    done?: boolean
 }
 
 export interface ChildrenType  {

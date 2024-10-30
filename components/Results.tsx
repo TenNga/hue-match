@@ -23,8 +23,20 @@ const Results = () => {
  
     return(
         <section className='flex flex-col items-center justify-center'>
-            <h1 className='text-4xl font-extrabold'>Result</h1>
-            {upload && <Step step={steps.one} />}
+            <h1 className='text-4xl font-extrabold mb-20'>Result</h1>
+            <div className='flex flex-col items-start gap-8'>
+                {
+                    upload ?
+                        <Step step={steps.one} done={true} /> :
+                        <Step step={steps.one} done={false} />
+                }
+                {
+                    hairColor !== 'rgb(255,255,255)' ?
+                        <Step step={steps.two} done={true} /> :
+                        <Step step={steps.two} done={false} />
+                }
+            </div>
+            
         </section>
     )
 };
