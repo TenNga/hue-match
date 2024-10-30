@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Step from './ui/Step'
 import { steps } from '@/constants'
 import ColorPicker from './ColorPicker'
 import PickedColors from './PickedColors'
+import { StepContext, StepProvider } from '@/contexts/StepContext'
 
 const SecondStep = ({image}:{image:File}) => {
-    const [currentColor, setCurrentColor] = useState('rgb(255,255,255)');
-    const [skinColor, setSkinColor] = useState('rgb(255,255,255)');
-    const [skinTwoColor, setSkinTwoColor] = useState('rgb(255,255,255)');
-    const [hairColor, setHairColor] = useState('rgb(255,255,255)');
-    const [count, setCount] = useState(0); //use to count three clicks
-
+    const {
+        currentColor,
+        setCurrentColor,
+        skinColor,
+        setSkinColor,
+        skinTwoColor, 
+        setSkinTwoColor,
+        hairColor,
+        setHairColor,
+        count,setCount
+    } = useContext(StepContext);
     useEffect(()=>{
         switch (true) {
             case count === 1:

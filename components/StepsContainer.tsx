@@ -1,21 +1,26 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
+import { StepContext, StepProvider } from '@/contexts/StepContext'
 
 const StepsContainer = () => {
     const [upload, setUpload] = useState<File[] | null>(null)
-    const [skinColor1, setSkinColor1] = useState("");
-    const [skinColor2, setSkinColor2] = useState("");
-    const [hairColor, setHairColor] = useState("");
     
-  return (
+   return (
     <div className='flex flex-col gap-10'>
+
         <FirstStep onUpload={setUpload} upload={upload}/>
+        
         {
-            upload && <SecondStep image={upload[0]}/>
+            upload && 
+            <StepProvider>
+                <SecondStep image={upload[0]}/>
+            </StepProvider>
         }
+            
+        
     </div>
   )
 }
