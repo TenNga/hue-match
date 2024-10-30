@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect } from 'react'
 import Step from './ui/Step'
 import { steps } from '@/constants'

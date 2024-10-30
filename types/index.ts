@@ -47,6 +47,8 @@ export interface PickedColorsProps {
 }
 
 export interface ShareContextType {
+    upload:File[] | null,
+    setUpload:React.Dispatch<React.SetStateAction<File[] | null>>,
     currentColor:string,
     setCurrentColor:React.Dispatch<React.SetStateAction<string>>,
     skinColor:string,

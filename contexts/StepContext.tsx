@@ -5,7 +5,8 @@ import React, { createContext, useState } from 'react'
 
 const StepContext = createContext<ShareContextType | null>(null);
 const StepProvider = ({children}:{children: React.ReactNode}) => {
-  
+    const [upload, setUpload] = useState<File[] | null>(null)
+    
     const [currentColor, setCurrentColor] = useState('rgb(255,255,255)');
     const [skinColor, setSkinColor] = useState('rgb(255,255,255)');
     const [skinTwoColor, setSkinTwoColor] = useState('rgb(255,255,255)');
@@ -13,6 +14,8 @@ const StepProvider = ({children}:{children: React.ReactNode}) => {
     const [count, setCount] = useState(0); //use to count three clicks
 
     const shareContext = {
+        upload,
+        setUpload,
         currentColor,
         setCurrentColor,
         skinColor,

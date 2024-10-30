@@ -1,3 +1,5 @@
+'use client'
+
 import { StepContext } from '@/contexts/StepContext';
 import React, { useContext } from 'react'
 
