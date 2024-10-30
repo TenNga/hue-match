@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
-import { createContext } from 'vm'
+'use client'
 
-const StepContext = createContext();
+import { ShareContextType } from '@/types';
+import React, { createContext, useState } from 'react'
+
+const StepContext = createContext<ShareContextType | null>(null);
 const StepProvider = ({children}:{children: React.ReactNode}) => {
   
     const [currentColor, setCurrentColor] = useState('rgb(255,255,255)');
@@ -19,10 +21,11 @@ const StepProvider = ({children}:{children: React.ReactNode}) => {
         setSkinTwoColor,
         hairColor,
         setHairColor,
-        count,setCount
+        count,
+        setCount
     }
     return (
-    <StepContext.Provider value={{shareContext}}>
+    <StepContext.Provider value={shareContext}>
         {children}
     </StepContext.Provider>
   )

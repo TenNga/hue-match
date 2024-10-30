@@ -1,11 +1,12 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Step from './ui/Step'
 import { steps } from '@/constants'
 import ColorPicker from './ColorPicker'
 import PickedColors from './PickedColors'
-import { StepContext, StepProvider } from '@/contexts/StepContext'
+import useStepContext from '@/hooks/useStepContext'
 
 const SecondStep = ({image}:{image:File}) => {
+ 
     const {
         currentColor,
         setCurrentColor,
@@ -15,8 +16,10 @@ const SecondStep = ({image}:{image:File}) => {
         setSkinTwoColor,
         hairColor,
         setHairColor,
-        count,setCount
-    } = useContext(StepContext);
+        count,
+        setCount
+    } = useStepContext();
+
     useEffect(()=>{
         switch (true) {
             case count === 1:

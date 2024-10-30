@@ -45,3 +45,16 @@ export interface PickedColorsProps {
     secondColor: string,
     thirdColor: string,
 }
+
+export interface ShareContextType {
+    currentColor:string,
+    setCurrentColor:React.Dispatch<React.SetStateAction<string>>,
+    skinColor:string,
+    setSkinColor:React.Dispatch<React.SetStateAction<string>>,
+    skinTwoColor:string, 
+    setSkinTwoColor:React.Dispatch<React.SetStateAction<string>>,
+    hairColor:string,
+    setHairColor:React.Dispatch<React.SetStateAction<string>>,
+    count:number,
+    setCount:React.Dispatch<React.SetStateAction<number>>,
+}
