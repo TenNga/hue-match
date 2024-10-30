@@ -1,10 +1,9 @@
-import { useQuery } from 'react-query';
+// hooks/usePalette.ts
+import { useMutation } from 'react-query';
 import { generatePalette } from '../utils/generatePalette';
 
-const usePalette = (selectedColors: string[], hairColor: string) => {
-  return useQuery(['palette', selectedColors, hairColor], () =>
-    generatePalette(selectedColors, hairColor)
+export const usePaletteMutation = () => {
+  return useMutation((params: { faceImage: string; selectedColors: string[]; hairColor: string }) =>
+    generatePalette(params.selectedColors, params.hairColor)
   );
 };
-
-export default usePalette;
