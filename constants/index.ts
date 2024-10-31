@@ -29,3 +29,4 @@ export const steps = {
   }
 
   export const whiteColor = 'rgb(255,255,255)';
+

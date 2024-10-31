@@ -3,13 +3,11 @@
 import React, { useState } from 'react'
 import Button from './ui/Button'
 import useStepContext from '@/hooks/useStepContext'
-import { usePaletteMutation } from '@/hooks/usePalette'
 import axios from 'axios'
+import { useGpt } from '@/hooks/useGpt'
 
 
 const MainButtons = () => {
-
-    const [response, setResponse] = useState<string>('');
     const {
         upload,
         skinColor,
@@ -27,27 +25,20 @@ const MainButtons = () => {
     Hair Color: ${hairColor}
   `;
 
-    const handleGeneratePalette = async () => {
-        try {
-            const res = await axios.post('/api/chatgpt', { prompt });
-            setResponse(res.data.choices?.[0]?.message?.content || 'No response');
-          } catch (error) {
-            console.error('Error fetching data:', error);
-            setResponse('Error fetching data');
-          }
-    }
+    const{ response, callChatGPTAPI, loading, error} = useGpt();
+    console.log("response:: ",response)
     return (
         <div className='flex justify-between items-center gap-9 pl-24'>
-            <div>
-                <h3>Response:</h3>
-                <p>{response}</p>
-            </div>
-            <Button type='primary' onGenerate={handleGeneratePalette}>
+            <Button type='primary' onGenerate={()=>callChatGPTAPI(prompt)}>
                 Generate
             </Button>
             <Button type='secondary'>
                 reset
             </Button>
+            {
+            response  && 
+            <p>{response}</p>
+            }
         </div>
     )
 }

@@ -19,7 +19,7 @@ export interface ChildrenType  {
 
 export interface ButtonProps extends ChildrenType {
     type: string,
-    onGenerate?:(() => void) | undefined
+    onGenerate?:()=>void
 }
 
 

@@ -1,3 +1,5 @@
+// app/api/chatgpt/route.ts
+
 import { NextResponse } from 'next/server';
 import axios from 'axios';
 
@@ -8,13 +10,13 @@ export async function POST(request: Request) {
     const response = await axios.post(
       'https://api.openai.com/v1/chat/completions',
       {
-        model: 'gpt-3.5-turbo', // specify the model here
+        model: 'gpt-4o-mini', // specify the model here
         messages: [{ role: 'user', content: prompt }],
       },
       {
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
         },
       }
     );
