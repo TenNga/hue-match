@@ -20,11 +20,11 @@ The **Hue Match** is a web application built with React, Next.js, and TypeScript
 
 ## Features
 
-- **Image Upload**: Upload a picture of your face to generate a personalized color palette.
-- **Color Selection**: Choose skin tone and hair color using an interactive color picker.
-- **Seasonal Palettes**: Generates suggested color palettes based on the user’s skin tone for four seasons (winter, summer, spring, and fall).
-- **Avoid Colors**: Provides a list of colors to avoid based on the user's skin tone.
-- **Interactive Color Picker**: Users select colors from their image, enhancing personalization.
+📁 **Image Upload**: Upload a picture of your face to generate a personalized color palette.
+✏️ **Color Selection**: Choose skin tone and hair color using an interactive color picker.
+🎨 **Seasonal Palettes**: Generates suggested color palettes based on the user’s skin tone for four seasons (winter, summer, spring, and fall).
+🚫 **Avoid Colors**: Provides a list of colors to avoid based on the user's skin tone.
+🔍 **Interactive Color Picker**: Users select colors from their image, enhancing personalization.
 
 ## Technologies Used
 
