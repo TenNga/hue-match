@@ -28,6 +28,7 @@ const PaletteDisplay = ({palettes}:{palettes:any}) => {
         <div className='palette-container'>
             {renderSeason}
             <RenderEachSeason key="color to avoid" eachSeason={{key:"Avoid",values:palettes.avoid_colors, avoid:true}} />
+            <p className='text-lg text-red-500'>* Click to copy color value</p>
         </div>
     </section>
   )

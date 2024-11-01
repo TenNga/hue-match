@@ -11,7 +11,7 @@ const StepsContainer = () => {
     const {upload, setUpload, hairColor} = useStepContext();
     
    return (
-    <section className='flex flex-col gap-10'>
+    <section className='flex flex-col gap-2 lg:gap-10'>
 
         <FirstStep onUpload={setUpload} upload={upload}/>
         

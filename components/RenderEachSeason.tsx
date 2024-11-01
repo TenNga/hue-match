@@ -6,6 +6,7 @@ import cn from 'classnames'
 
 const RenderEachSeason = ({eachSeason:{key,values,avoid}}:EachSeasonType) => {
   //"winter": ["#678b87", "#3c6469", "#13293c"]
+    values.length = 3; //accept first three values
     const renderColors = values.map(color => <ColorPill key={color} color={color} />)
   return (
     <div className='each-season'>

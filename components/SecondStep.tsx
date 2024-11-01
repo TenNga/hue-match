@@ -45,7 +45,7 @@ const SecondStep = ({image}:{image:File}) => {
   return (
     <div className='second-step'>
          <Step step={steps.two} />  
-         <div className='ml-4 lg:pl-24'>
+         <div className='lg:ml-4 lg:pl-24'>
             <PickedColors firstColor={skinColor} secondColor={skinTwoColor} thirdColor={hairColor}/>  
             <ColorPicker onPicked = {handleColorPicked} image={image}/>
          </div>
