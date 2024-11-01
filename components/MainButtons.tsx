@@ -28,7 +28,7 @@ const MainButtons = () => {
     const resetCall = useReset();
    
     return (
-        <div className='flex justify-between items-center gap-9 pl-24'>
+        <div className='flex justify-between items-center gap-9 pl-4 lg:pl-24'>
             <Button type='primary' onGenerate={()=>callChatGPTAPI(prompt)}>
                 {loading ? 'Loading...' : 'Generate'}
             </Button>

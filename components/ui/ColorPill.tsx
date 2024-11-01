@@ -9,7 +9,7 @@ const ColorPill = ({color}:{color:string}) => {
         }
       };
   return (
-    <button onClick={handleCopy} key={color} className='rounded-lg py-2 px-4 text-white font-semibold border border-[#495867] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]' style={{backgroundColor:color}}>{color}</button>
+    <button onClick={handleCopy} key={color} className='rounded-lg py-1 px-2 lg:py-2 lg:px-4 text-white font-semibold border border-[#495867] drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]' style={{backgroundColor:color}}>{color}</button>
   )
 }
 

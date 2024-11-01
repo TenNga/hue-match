@@ -42,7 +42,7 @@ body {
 /* File Upload */
 @layer components {
   .file-upload {
-    @apply flex cursor-pointer mx-24 mt-6 flex-col items-center justify-center gap-3 rounded-md border border-dashed border-[#495867] p-5;
+    @apply flex cursor-pointer mx-3 mt-6 flex-col items-center justify-center gap-3 rounded-md border border-dashed border-[#495867] p-5 lg:mx-24;
   }
   
   .file-upload_label {

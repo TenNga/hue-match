@@ -11,7 +11,7 @@ const Step = ({step:{icon,label}, done}:StepProps) => {
                 height={icon.height}
                 alt={icon.alt}
               />
-              <p className="inline text-3xl font-extrabold capitalize">{label}</p>
+              <p className="inline text-2xl font-extrabold capitalize xl:text-3xl">{label}</p>
             </div>
   )
 }

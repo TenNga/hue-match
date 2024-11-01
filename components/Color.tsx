@@ -8,7 +8,7 @@ const Color = ({ label, color }: ColorProps) => {
 
   return (
     <div className='skin-one flex gap-3 items-center'>
-      <p className="text-[#49586] text-xl font-bold capitalize">{label}</p>
+      <p className="text-[#49586] text-lg lg:text-xl font-bold capitalize">{label}</p>
       <div 
       className={`w-10 h-10 skin-color-1 border rounded-full border-black`}
       style={{backgroundColor:hexColor}}></div>
