@@ -55,4 +55,4 @@ The **Hue Match** is a web application built with React, Next.js, and TypeScript
 5. Visit `http://localhost:3000` in your browser.
 
 ## Screenshots
-![](https://github.com/TenNga/hue-match.git/screen_demo.gif)
+![](https://github.com/TenNga/hue-match/blob/main/screen_demo.gif)
