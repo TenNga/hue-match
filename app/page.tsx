@@ -20,7 +20,7 @@ export default function Home() {
             <Step step={steps.three} />
           </div>
           <Button type="main">
-            <Link href="/generator">let's Start</Link>
+            <Link href="/generator">let&apos;s Start</Link>
             </Button>
         </section>
         <section className="flex-grow w-full">
