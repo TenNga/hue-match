@@ -6,15 +6,15 @@ import StepsContainer from '@/components/StepsContainer'
 const Generator = () => {
   return (
     <div>
-        <Header />
-        <Main>
-        <section className="flex-grow w-full">
-           <StepsContainer />
-          </section>
-          <section className="flex-grow w-full">
+      <Header />
+      <Main>
+        <section className="flex-grow flex-grow-[2]">
+          <StepsContainer />
+        </section>
+        <section className="flex-grow flex-grow">
           <Results />
         </section>
-        </Main>
+      </Main>
     </div>
   )
 }

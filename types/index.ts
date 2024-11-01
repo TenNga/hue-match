@@ -61,6 +61,8 @@ export interface ShareContextType {
     setHairColor:React.Dispatch<React.SetStateAction<string>>,
     count:number,
     setCount:React.Dispatch<React.SetStateAction<number>>,
+    palettes:string,
+    setPalettes:React.Dispatch<React.SetStateAction<string>>,
 }
 
 export interface PromptType {
@@ -69,3 +71,11 @@ export interface PromptType {
 }
 
 export interface PaletteProps { selectedColorsArr: string[], hairColor: string }
+
+export interface EachSeasonType {
+    eachSeason:{
+    key: string,
+    values: string[],
+    avoid: boolean
+  }
+}

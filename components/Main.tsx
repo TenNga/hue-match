@@ -5,7 +5,7 @@ import React from 'react'
 const Main = ({children} : ChildrenType) => {
   return (
       <StepProvider>
-        <main className="flex flex-col-reverse justify-between container my-10 mx-auto gap-4 lg:flex-row">
+        <main className="flex flex-col-reverse justify-between container my-10 mx-auto gap-5 lg:flex-row">
               {children}
         </main>
       </StepProvider>

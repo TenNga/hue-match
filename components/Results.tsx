@@ -9,33 +9,24 @@ import PaletteDisplay from './PaletteDisplay';
 const Results = () => {
     const {
         upload,
-        setUpload,
-        currentColor,
-        setCurrentColor,
-        skinColor,
-        setSkinColor,
-        skinTwoColor, 
-        setSkinTwoColor,
         hairColor,
-        setHairColor,
-        count,
-        setCount
+        palettes
     } = useStepContext();
 
-    const response = `{
-    "color_palettes": {
-        "winter": ["#678b87", "#3c6469", "#13293c"],
-        "summer": ["#ccac96", "#dab3b9", "#b89fa0"],
-        "spring": ["#c0938d", "#d3b3ad", "#e1cdbf"],
-        "fall": ["#c27567", "#8b4738", "#5b2e22"]
-    },
-    "avoid_colors": ["#f5e3e0", "#f1dedb", "#ebd4d0"]
-}`
-    const generatedPalettes = JSON.parse(response);
+//     const response = `{
+//     "color_palettes": {
+//         "winter": ["#678b87", "#3c6469", "#13293c"],
+//         "summer": ["#ccac96", "#dab3b9", "#b89fa0"],
+//         "spring": ["#c0938d", "#d3b3ad", "#e1cdbf"],
+//         "fall": ["#c27567", "#8b4738", "#5b2e22"]
+//     },
+//     "avoid_colors": ["#f5e3e0", "#f1dedb", "#ebd4d0"]
+// }`
+    const generatedPalettes = palettes && JSON.parse(palettes);
  
     return(
         <section className='flex flex-col items-center justify-center'>
-            <h1 className='text-4xl font-extrabold mb-20'>Result</h1>
+            <h1 className='text-4xl font-extrabold mb-8'>Result</h1>
             {
                 generatedPalettes ? 
                 <PaletteDisplay palettes={generatedPalettes}/>

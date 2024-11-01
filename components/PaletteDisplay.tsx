@@ -13,16 +13,21 @@ const PaletteDisplay = ({palettes}:{palettes:any}) => {
     // }
     
     const renderSeason = Object.keys(palettes.color_palettes).map(key => {
-        const props = {key,season:palettes.color_palettes[key]}
+        const props = {
+            key,
+            values:palettes.color_palettes[key],
+            avoid:false
+        }
         return (
-            <RenderEachSeason key={key} eachSeason={props}/>
+            <RenderEachSeason key={key} eachSeason={props} />
         )
       });
 
   return (
-    <section>
-        <div>
+    <section className='w-full'>
+        <div className='palette-container'>
             {renderSeason}
+            <RenderEachSeason key="color to avoid" eachSeason={{key:"Avoid",values:palettes.avoid_colors, avoid:true}} />
         </div>
     </section>
   )

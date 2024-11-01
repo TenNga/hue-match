@@ -13,6 +13,7 @@ const StepProvider = ({children}:{children: React.ReactNode}) => {
     const [skinTwoColor, setSkinTwoColor] = useState(whiteColor);
     const [hairColor, setHairColor] = useState(whiteColor);
     const [count, setCount] = useState(0); //use to count three clicks
+    const [palettes, setPalettes] =useState('');
 
     const shareContext = {
         upload,
@@ -26,7 +27,9 @@ const StepProvider = ({children}:{children: React.ReactNode}) => {
         hairColor,
         setHairColor,
         count,
-        setCount
+        setCount,
+        palettes,
+        setPalettes
     }
     return (
     <StepContext.Provider value={shareContext}>
