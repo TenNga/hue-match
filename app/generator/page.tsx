@@ -8,10 +8,10 @@ const Generator = () => {
     <div>
       <Header />
       <Main>
-        <section className="flex-grow flex-grow-[2]">
+        <section className="flex-grow-[2] basis-1/2">
           <StepsContainer />
         </section>
-        <section className="flex-grow flex-grow">
+        <section className="flex-grow">
           <Results />
         </section>
       </Main>

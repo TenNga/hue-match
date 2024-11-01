@@ -6,7 +6,7 @@ import React, { createContext, useState } from 'react'
 
 const StepContext = createContext<ShareContextType | null>(null);
 const StepProvider = ({children}:{children: React.ReactNode}) => {
-    const [upload, setUpload] = useState<File[] | null>(null)
+    const [upload, setUpload] = useState<File[] | null>(null);
     
     const [currentColor, setCurrentColor] = useState(whiteColor);
     const [skinColor, setSkinColor] = useState(whiteColor);

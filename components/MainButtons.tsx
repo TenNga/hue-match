@@ -6,6 +6,7 @@ import useStepContext from '@/hooks/useStepContext'
 import axios from 'axios'
 import { useGpt } from '@/hooks/useGpt'
 import { usePrompt } from '@/hooks/usePrompt'
+import { useReset } from '@/hooks/useReset'
 
 
 const MainButtons = () => {
@@ -24,13 +25,14 @@ const MainButtons = () => {
     useEffect(()=>{
         setPalettes(response);
     },[response])
+    const resetCall = useReset();
    
     return (
         <div className='flex justify-between items-center gap-9 pl-24'>
             <Button type='primary' onGenerate={()=>callChatGPTAPI(prompt)}>
                 {loading ? 'Loading...' : 'Generate'}
             </Button>
-            <Button type='secondary'>
+            <Button type='secondary' onGenerate={()=>resetCall()}>
                 reset
             </Button>
             {/* {
