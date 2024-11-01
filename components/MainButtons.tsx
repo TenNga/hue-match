@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react'
 import Button from './ui/Button'
 import useStepContext from '@/hooks/useStepContext'
-import axios from 'axios'
 import { useGpt } from '@/hooks/useGpt'
 import { usePrompt } from '@/hooks/usePrompt'
 import { useReset } from '@/hooks/useReset'
@@ -11,7 +10,6 @@ import { useReset } from '@/hooks/useReset'
 
 const MainButtons = () => {
     const {
-        upload,
         skinColor,
         skinTwoColor,
         hairColor,
@@ -35,10 +33,6 @@ const MainButtons = () => {
             <Button type='secondary' onGenerate={()=>resetCall()}>
                 reset
             </Button>
-            {/* {
-            response  && 
-            <p>{response}</p>
-            } */}
         </div>
     )
 }

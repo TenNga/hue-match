@@ -7,8 +7,7 @@ export function useGpt() {
   const [response, setResponse] = useState('');
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('');
-  // const prompt = "Your prompt goes here"; // Your existing prompt in string format
-
+ 
   const callChatGPTAPI = async (prompt: string) => {
     setLoading(true);
 

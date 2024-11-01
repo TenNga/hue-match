@@ -15,14 +15,9 @@ const StepsContainer = () => {
 
         <FirstStep onUpload={setUpload} upload={upload}/>
         
-        {
-            upload && 
-                <SecondStep image={upload[0]}/>
-        }
+        { upload && <SecondStep image={upload[0]}/> }
         
-        {
-        hairColor !== whiteColor && <MainButtons />
-        }
+        { hairColor !== whiteColor && <MainButtons /> }
         
             
         
