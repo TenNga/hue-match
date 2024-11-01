@@ -63,4 +63,9 @@ export interface ShareContextType {
     setCount:React.Dispatch<React.SetStateAction<number>>,
 }
 
+export interface PromptType {
+    selectedColors:string[],
+    hairColor:string
+}
+
 export interface PaletteProps { selectedColorsArr: string[], hairColor: string }
