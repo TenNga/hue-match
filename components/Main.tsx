@@ -1,5 +1,3 @@
-'use client'
-
 import { StepProvider } from '@/contexts/StepContext'
 import { ChildrenType } from '@/types'
 import React from 'react'

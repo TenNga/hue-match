@@ -1,11 +1,9 @@
 'use client'
 
-import React, { useContext, useState } from 'react'
+import React from 'react'
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
-import { StepContext, StepProvider } from '@/contexts/StepContext'
 import useStepContext from '@/hooks/useStepContext'
-import Button from './ui/Button'
 import { whiteColor } from '@/constants'
 import MainButtons from './MainButtons'
 

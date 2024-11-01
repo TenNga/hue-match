@@ -6,7 +6,7 @@ import { ImageColorPicker } from 'react-image-color-picker';
 
 const ColorPicker = ({image, onPicked}:ColorPickerProps) => {
   const handleColorPick = (color: string) => {
-    console.log('Selected color:', color); // Selected color: rgb(101, 42, 65)
+    // console.log('Selected color:', color); // Selected color: rgb(101, 42, 65)
     onPicked(color);
   };
 
