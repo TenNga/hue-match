@@ -1,9 +1,3 @@
-Resource: 
-
-- https://www.npmjs.com/package/react-image-color-picker?activeTab=readme
-- My design: 
-    https://www.figma.com/design/KMno1dJ3EdJDeacy7Dr4r2/HueMatch?node-id=1-2&t=mHlnVomCdMCUFngx-1
-
 # Hue Match: Personal Palette Generator
 
 The **Hue Match** is a web application built with React, Next.js, and TypeScript. It uses the ChatGPT API to generate customized color palettes based on the user's facial image and selected colors, creating seasonal palettes and suggested color groups to avoid.
