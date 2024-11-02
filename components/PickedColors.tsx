@@ -4,9 +4,9 @@ import { PickedColorsProps } from '@/types'
 
 const PickedColors = ({firstColor, secondColor, thirdColor}:PickedColorsProps) => {
     return (
-        <div className='flex justify-start gap-5'>
-            <Color label="skin # 1" color={firstColor} />
-            <Color label="skin # 2" color={secondColor} />
+        <div className='flex justify-center lg:justify-start gap-3 lg:gap-5'>
+            <Color label="skin #1" color={firstColor} />
+            <Color label="skin #2" color={secondColor} />
             <Color label="Hair" color={thirdColor} />
         </div>
     )

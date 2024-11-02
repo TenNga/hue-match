@@ -17,7 +17,7 @@ const Results = () => {
  
     return(
         <section className='flex flex-col items-center justify-center'>
-            <h1 className='text-4xl font-extrabold mb-8'>Result</h1>
+            <h1 className='text-4xl font-extrabold mb-8 text-center lg:text-left'>Result</h1>
             {
                 generatedPalettes ? 
                 <PaletteDisplay palettes={generatedPalettes}/>
