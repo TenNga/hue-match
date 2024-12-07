@@ -5,17 +5,16 @@ import StepsContainer from '@/components/StepsContainer'
 
 const Generator = () => {
   return (
-    <div>
+    <main className='mx-[20px] lg:mx-[80px]'>
       <Header />
       <Main>
         <section className="flex-grow-[2] basis-1/2">
           <StepsContainer />
         </section>
-        <section className="flex-grow">
+        <hr className='bg-black lg:hidden'/>
           <Results />
-        </section>
       </Main>
-    </div>
+    </main>
   )
 }
 

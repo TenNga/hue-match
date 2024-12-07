@@ -8,7 +8,7 @@ const RenderEachSeason = ({eachSeason:{key,values,avoid}}:EachSeasonType) => {
     const renderColors = values?.map(color => <ColorPill key={color} color={color} />)
   return (
     <div className='each-season'>
-      <h1 className={cn('capitalize text-lg lg:text-2xl font-bold mb-4',{
+      <h1 className={cn('capitalize text-lg lg:text-xl font-bold mb-4',{
         'font-extrabold' : avoid
       })}>{key} colors:</h1>
       <div className='flex justify-around gap-2 mb-6'>

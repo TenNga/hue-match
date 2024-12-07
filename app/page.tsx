@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen lg:mx-[100px]">
       <Header />
       <main className="flex flex-col justify-between container my-10 mx-auto gap-4 lg:flex-row">
         <section className="flex-grow mx-4 lg:w-full">

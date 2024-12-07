@@ -10,8 +10,9 @@ const Step = ({step:{icon,label}, done}:StepProps) => {
                 width={icon.width}
                 height={icon.height}
                 alt={icon.alt}
+                className={done? 'w-[50px]':''}
               />
-              <p className="inline text-2xl font-extrabold capitalize xl:text-3xl">{label}</p>
+              <p role='heading' className="inline text-xl font-extrabold capitalize xl:text-xl">{label}</p>
             </div>
   )
 }

@@ -13,31 +13,41 @@ const Results = () => {
         palettes
     } = useStepContext();
 
-    const generatedPalettes = palettes && JSON.parse(palettes);
+    const RenderSteps = () => {
+        if(upload && hairColor !== 'rgb(255,255,255)'){
+            return(<>
+                <Step step={steps.one} done={true} />
+                <Step step={steps.two} done={true} /> 
+                <Step step={steps.three} done={false} />
+            </>)
+        } else {
+            return(<>
+                <Step step={steps.one} done={false} />
+                <Step step={steps.two} done={false} />
+                <Step step={steps.three} done={false} />
+            </>)
+        }
+    }
+
+    
+    const RenderResult = () => {
+        const generatedPalettes = palettes && JSON.parse(palettes);
+        
+        if (generatedPalettes) {
+            return <PaletteDisplay palettes={generatedPalettes} />
+        }
+
+        return (
+            <div className='flex flex-col items-start gap-8'>
+                <RenderSteps />
+            </div>
+        )
+    }
  
     return(
-        <section className='flex flex-col items-center justify-center'>
-            <h1 className='text-4xl font-extrabold mb-8 text-center lg:text-left'>Result</h1>
-            {
-                generatedPalettes ? 
-                <PaletteDisplay palettes={generatedPalettes}/>
-                :
-                <div className='flex flex-col items-start gap-8'>
-                {
-                    upload ?
-                        <Step step={steps.one} done={true} /> :
-                        <Step step={steps.one} done={false} />
-                }
-                {
-                    hairColor !== 'rgb(255,255,255)' ?
-                        <Step step={steps.two} done={true} /> :
-                        <Step step={steps.two} done={false} />
-                }
-                <Step step={steps.three} done={false} />
-            </div>
-            }
-            
-            
+        <section className='flex-grow flex flex-col items-center justify-center'>
+            <h1 className='text-2xl font-extrabold mb-8 text-center lg:text-left'>Result</h1>
+            <RenderResult />
         </section>
     )
 };
