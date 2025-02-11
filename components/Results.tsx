@@ -45,7 +45,7 @@ const Results = () => {
     }
  
     return(
-        <section className='flex-grow flex flex-col items-center justify-center'>
+        <section className='flex-grow flex flex-col items-center justify-start'>
             <h1 className='text-2xl font-extrabold mb-8 text-center lg:text-left'>Result</h1>
             <RenderResult />
         </section>

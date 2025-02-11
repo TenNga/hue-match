@@ -10,7 +10,7 @@ const ColorPicker = ({image, onPicked}:ColorPickerProps) => {
   };
 
   return (
-    <div className='mt-6'>
+    <div className='mt-6 w-[350px] lg:w-[450px]'>
       <ImageColorPicker
         onColorPick={handleColorPick}
         imgSrc={convertFileToUrl(image)}
